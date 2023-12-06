@@ -62,7 +62,7 @@ function mergeRaces(races: [number, number][]): [number, number] {
 
 function raceOptions(race: [number, number]): number {
     let [t, r] = race;
-    t -= .001;
+    t -= .001; // this is a minor hack to make sure left bound is exclusive
     const raceRoots = [
         Math.floor((t - Math.sqrt(t ** 2 - 4 * r)) / 2),
         Math.floor((t + Math.sqrt(t ** 2 - 4 * r)) / 2)
